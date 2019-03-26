@@ -1,0 +1,31 @@
+{
+  "name": "lerna-ts-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:ts": "tsc -b packages/library",
+    "build:browserify": "browserify packages/main/src/index.ts -p tsify --verbose --debug -o packages/main/build-browserify/client.js",
+    "build:sourceify": "browserify packages/main/src/index.ts -p tsify -g sourceify --verbose --debug -o packages/main/build-soruceify/client.js",
+    "build:all": "npm run build:ts && npm run build:browserify && npm run build:sourceify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremija/lerna-ts-example.git"
+  },
+  "author": "Jerko Steiner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jeremija/lerna-ts-example/issues"
+  },
+  "homepage": "https://github.com/jeremija/lerna-ts-example#readme",
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "sourceify": "git+https://github.com/jeremija/sourceify.git#sources-content",
+    "tsify": "^4.0.1",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {
+    "@example/library": "file:packages/library"
+  }
+}

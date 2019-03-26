@@ -1,0 +1,5 @@
+{
+  "name": "@example/library",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts"
+}
