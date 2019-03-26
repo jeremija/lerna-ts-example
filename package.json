@@ -6,7 +6,7 @@
   "scripts": {
     "build:ts": "tsc -b packages/library",
     "build:browserify": "browserify packages/main/src/index.ts -p tsify --verbose --debug -o packages/main/build-browserify/client.js",
-    "build:sourceify": "browserify packages/main/src/index.ts -p tsify -g sourceify --verbose --debug -o packages/main/build-soruceify/client.js",
+    "build:sourceify": "browserify packages/main/src/index.ts -p tsify -g sourceify --verbose --debug -o packages/main/build-sourceify/client.js",
     "build:all": "npm run build:ts && npm run build:browserify && npm run build:sourceify"
   },
   "repository": {
